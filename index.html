@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitTrack Pro — SPA (Dark Pastel)</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">
+        <svg width="42" height="42" viewBox="0 0 64 64" aria-hidden>
+          <defs>
+            <linearGradient id="gA" x1="0" x2="1"><stop offset="0" stop-color="#A58CFF"/><stop offset="1" stop-color="#7BD8C6"/></linearGradient>
+          </defs>
+          <rect x="2" y="2" width="60" height="60" rx="12" fill="url(#gA)"></rect>
+        </svg>
+        <div>
+          <div class="brand-title">FitTrack Pro</div>
+          <div class="brand-sub">Wellness Dashboard</div>
+        </div>
+      </div>
+
+      <nav class="side-nav">
+        <a href="#overview" class="nav-link">Dashboard</a>
+        <a href="#activity" class="nav-link">Activity</a>
+        <a href="#meals" class="nav-link">Meals</a>
+        <a href="#insights" class="nav-link">Insights</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="small-muted" id="sidebar-date"></div>
+        <button id="clear-storage" class="btn-ghost">Reset Session</button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <header class="header">
+        <div class="header-left">
+          <h1 id="page-title">Overview</h1>
+          <div id="page-sub" class="header-sub">Personal summary & today’s snapshot</div>
+        </div>
+        <div class="header-right">
+          <div id="live-clock" class="clock"></div>
+        </div>
+      </header>
+
+      <!-- VIEWS (Automatically filled by JS) -->
+      <section id="view-overview" class="view"></section>
+      <section id="view-activity" class="view" hidden></section>
+      <section id="view-meals" class="view" hidden></section>
+      <section id="view-insights" class="view" hidden></section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
